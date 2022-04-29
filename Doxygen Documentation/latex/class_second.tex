@@ -1,0 +1,63 @@
+\hypertarget{class_second}{}\doxysection{Second Class Reference}
+\label{class_second}\index{Second@{Second}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_second_ae9e848358f3e3df4192a9976d38797d2}{can\+Pair}} (char a, char b)
+\item 
+int \mbox{\hyperlink{class_second_a51bd960d09b1ec2564fe738d9075c23b}{compute\+Dp\+Table}} (string s, vector$<$ vector$<$ int $>$ $>$ \&dp, vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \&store)
+\item 
+void \mbox{\hyperlink{class_second_a38cad229d032dac867cdbe10729bb620}{compute\+Pairs}} (int x, int y, vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \&store, vector$<$ pair$<$ int, int $>$ $>$ \&ans)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_second_ae9e848358f3e3df4192a9976d38797d2}\label{class_second_ae9e848358f3e3df4192a9976d38797d2}} 
+\index{Second@{Second}!canPair@{canPair}}
+\index{canPair@{canPair}!Second@{Second}}
+\doxysubsubsection{\texorpdfstring{canPair()}{canPair()}}
+{\footnotesize\ttfamily bool Second\+::can\+Pair (\begin{DoxyParamCaption}\item[{char}]{a,  }\item[{char}]{b }\end{DoxyParamCaption})}
+
+it just checks if two chars are correct pairings or not ie A-\/U AND C-\/G 
+\begin{DoxyParams}{Parameters}
+{\em char} & a, char b and checking if two chars can pair \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if two chars can be paired else false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_second_a51bd960d09b1ec2564fe738d9075c23b}\label{class_second_a51bd960d09b1ec2564fe738d9075c23b}} 
+\index{Second@{Second}!computeDpTable@{computeDpTable}}
+\index{computeDpTable@{computeDpTable}!Second@{Second}}
+\doxysubsubsection{\texorpdfstring{computeDpTable()}{computeDpTable()}}
+{\footnotesize\ttfamily int Second\+::compute\+Dp\+Table (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{vector$<$ vector$<$ int $>$ $>$ \&}]{dp,  }\item[{vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \&}]{store }\end{DoxyParamCaption})}
+
+this computes the dp table based on the reccurence dp\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}=max(dp\mbox{[}i\mbox{]}\mbox{[}k-\/1\mbox{]}+dp\mbox{[}k+1\mbox{]}\mbox{[}j-\/1\mbox{]}+1) if canpair(s\mbox{[}k\mbox{]},s\mbox{[}j\mbox{]}) 
+\begin{DoxyParams}{Parameters}
+{\em vector$<$vector$<$int$>$$>$} & dp table and vector$<$vector$<$pair$<$int,int$>$$>$$>$ store table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pairs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_second_a38cad229d032dac867cdbe10729bb620}\label{class_second_a38cad229d032dac867cdbe10729bb620}} 
+\index{Second@{Second}!computePairs@{computePairs}}
+\index{computePairs@{computePairs}!Second@{Second}}
+\doxysubsubsection{\texorpdfstring{computePairs()}{computePairs()}}
+{\footnotesize\ttfamily void Second\+::compute\+Pairs (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \&}]{store,  }\item[{vector$<$ pair$<$ int, int $>$ $>$ \&}]{ans }\end{DoxyParamCaption})}
+
+this function computes the actual pairs which are in the optimal pairing and reports them 
+\begin{DoxyParams}{Parameters}
+{\em int} & x, int y, vector$<$vector$<$pair$<$int,int$>$$>$$>$ store table and vector$<$pair$<$int,int$>$$>$ ans \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+second.\+h\item 
+second.\+cpp\end{DoxyCompactItemize}

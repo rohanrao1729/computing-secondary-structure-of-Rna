@@ -1,0 +1,46 @@
+\hypertarget{class_driver}{}\doxysection{Driver Class Reference}
+\label{class_driver}\index{Driver@{Driver}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_driver_a93c51ad8b1e9ff3d39f259938d96dfe1}{convert\+\_\+to\+\_\+proper}} (string s)
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_driver_a6795e070301ed5f739a2734ed156760e}{compute\+Secondary\+Structure}} (string s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_driver_a6795e070301ed5f739a2734ed156760e}\label{class_driver_a6795e070301ed5f739a2734ed156760e}} 
+\index{Driver@{Driver}!computeSecondaryStructure@{computeSecondaryStructure}}
+\index{computeSecondaryStructure@{computeSecondaryStructure}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{computeSecondaryStructure()}{computeSecondaryStructure()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Driver\+::compute\+Secondary\+Structure (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+function which is actually is a driver which calls and does all the required work. it creates a dp table and computes pairs from it and reports the no of pairings in the string. 
+\begin{DoxyParams}{Parameters}
+{\em string} & s, to compute the secondary structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$pair$<$int,int$>$$>$ to compute the secondary structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_driver_a93c51ad8b1e9ff3d39f259938d96dfe1}\label{class_driver_a93c51ad8b1e9ff3d39f259938d96dfe1}} 
+\index{Driver@{Driver}!convert\_to\_proper@{convert\_to\_proper}}
+\index{convert\_to\_proper@{convert\_to\_proper}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{convert\_to\_proper()}{convert\_to\_proper()}}
+{\footnotesize\ttfamily string Driver\+::convert\+\_\+to\+\_\+proper (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+Function that converts string with unneeded chars to a string which comtains only A,G,U,C chars 
+\begin{DoxyParams}{Parameters}
+{\em string} & s that has to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string ss, converted string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+driver.\+h\item 
+driver.\+cpp\end{DoxyCompactItemize}

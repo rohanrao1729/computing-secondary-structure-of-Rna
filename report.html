@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<title>REPORT Ass-2</title>
+
+<head>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 75px;
+            background-color: red;
+            border: 1px solid black;
+        }
+
+        #div2 {
+            transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            /* IE 9 */
+            -moz-transform: rotate(30deg);
+            /* Firefox */
+            -webkit-transform: rotate(30deg);
+            /* Safari and Chrome */
+            -o-transform: rotate(30deg);
+            /* Opera */
+            background-color: yellow;
+        }
+
+        table {
+            margin: 10%;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .ctr {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 0em;
+
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .p1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background-color: lightblue;
+            padding: 5em 10em;
+            font-size: 1.5em;
+            /* font-style: italic; */
+        }
+
+        .p2 {
+
+            background-color: lightblue;
+            padding: 5em 22em;
+            font-size: 1.5em;
+            font-style: italic;
+        }
+
+        .header {
+            /* border-style: groove;
+            border-width: 11em;
+            font-size: 2em; */
+            font-family: "Lucida Console", "Courier New", monospace;
+            background-color: lightblue;
+            padding: 5em 10em;
+            font-size: 1.5em;
+            font-style: italic;
+            width: 15em;
+            margin-left: 14em;
+            margin-bottom: 15em;
+            margin-top: 15em;
+
+        }
+
+        .k1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-decoration: underline;
+            margin-top: 10em;
+        }
+
+        .vs {
+            padding: 0px 450px;
+            font-size: 1.5em;
+        }
+
+        .vs1 {
+            padding: 0px 450px;
+            font-size: 1.5em;
+            margin-left: 0.5em;
+        }
+
+        .p3 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            border: 5px solid black;
+            width: 50em;
+            height: 5em;
+            margin-left: 12em;
+            margin-top: 15em;
+            margin-bottom: 20em;
+            padding-top: 5em;
+            padding-left: 8em;
+            font-size: 1.2em;
+        }
+
+        .p4 {
+            background-color: lightblue;
+            padding: 5em 12em;
+            font-size: 1.5em;
+            font-style: normal;
+        }
+
+        .p5 {
+            background-color: lightgreen;
+            padding: 5em 12em;
+            font-size: 1.5em;
+            font-style: normal;
+            margin-bottom: 15em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="header" style="text-align:center">RNA secondary structure prediction Algorithm</h1>
+    <h2 class="k1" style="text-align:center">Team members</h2>
+    <h4 class="p2">Rohith Kumar Gattu - 2019A7PS0049H </br>
+        Kasina Satwik - 2019A7PS0011H <br style="padding-bottom: 1.5em">
+        Rohan Rao Nallani - 2019A7PS0048H <br style="padding-bottom: 1.5em">
+        Srikar Sashank M - 2019A7PS0160H</h4>
+
+    <br>
+    <h2 class="k1" style="text-align:center">RNA Secondary structure prediction algorithm</h2>
+    <p class="p1">
+        Current RNA secondary structure prediction methods are mainly based on the minimum free energy algorithm,
+        which finds the optimal folding state of RNA in vivo using an iterative method to meet the minimum energy
+        or other constraints.
+    </p>
+    <br>
+    <h4 class="p3">
+        Following are the tables of inputs and corresponding outputs.
+    </h4>
+    </div>
+    <p class="vs1">Now we'll look at the table with different inputs , their run times and their number of vector pairs
+    </p>
+    <table id="customers" style="width:80%; text-align:center ; margin-bottom: 15em;">
+        <tr>
+            <th>
+                Size of Input
+            </th>
+            <th>
+                Run Time
+            </th>
+            <th>
+                Number of Pairs in secondary structure
+            </th>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>0.167</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>0.291</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>1.814</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>0.175</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>7.75</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>0.012</td>
+            <td>0</td>
+        </tr>
+        <!-- <tr>
+            <td>757</td>
+            <td>1.4740</td>
+            <td>63460</td>
+        </tr>
+        <tr>
+            <td>357</td>
+            <td>0.3080</td>
+            <td>14944</td>
+        </tr>
+        <tr>
+            <td>902</td>
+            <td>2.0670</td>
+            <td>96519</td>
+        </tr>
+        <tr>
+            <td>91</td>
+            <td>0.0180</td>
+            <td>884</td>
+        </tr> -->
+    </table>
+    <p class="vs">Now we'll look at how run time is effected by input size</p>
+    <table id="customers" style="width:80%; text-align:center">
+        <tr>
+            <th>
+                Input Size
+            </th>
+            <th>
+                Run Time
+            </th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>0.012</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>0.167</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>0.175</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>0.291</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>1.814</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>7.75</td>
+        </tr>
+        <!-- <tr>
+            <td>979/td>
+            <td>1.1040</td>
+        </tr>
+        <tr>
+            <td>746</td>
+            <td>1.2627</td>
+        </tr>
+        <tr>
+            <td>757</td>
+            <td>1.3677</td>
+        </tr>
+        <tr>
+            <td>902</td>
+            <td>2.0580</td>
+        </tr> -->
+    </table>
+    <p class="vs">Now we'll look at how run time is effected by Number of Pairs in secondary structure</p>
+    <table id="customers" style="width:80%; text-align:center">
+        <tr>
+            <th>
+                Number of Pairs in secondary structure
+            </th>
+            <th>
+                Run Time
+            </th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0.012</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>0.167</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>0.175</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>0.291</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1.814</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>7.75</td>
+        </tr>
+        <!-- <tr>
+            <td>49638</td>
+            <td>1.1040</td>
+        </tr>
+        <tr>
+            <td>59270</td>
+            <td>1.2627</td>
+        </tr>
+        <tr>
+            <td>63640</td>
+            <td>1.3677</td>
+        </tr>
+        <tr>
+            <td>96519</td>
+            <td>2.0580</td>
+        </tr> -->
+    </table>
+    <h1 style="margin-left: 13em;font-size: 3em;text-decoration: underline ;">RESULTS</h1>
+    <p class="vs" style="margin-bottom: 2em;margin-top: 2em;">
+        <!-- We will now look into the test cases -->
+    </p>
+
+    <!-- these are the images for the outputs -->
+    <p class="vs">TESTCASE - 1</p>
+    <img style="margin-left: 20em;margin-bottom: 5em;" src="testcase-1.jpeg">
+    <p class="vs">TESTCASE - 2</p>
+    <img style="margin-left: 20em;margin-bottom: 5em;" src="testcase-2.jpeg">
+    <p class="vs">TESTCASE - 3 with the input <br>
+        GGGUGUAGAAAAGUAAGGGAAACUCAAACCCCUUUCUACACCC <br>
+        (We have not included the DP tables in this picture as it is very big table and could not fit in a pic)
+    </p>
+    <img style="margin-left: 20em;margin-bottom: 5em;" src="testcase-3.jpeg">
+
+
+    <h4 style="text-align:center ; font-size: 1.5em;margin-top: 10em ;font-style: italic;text-decoration: underline; ">
+        This is the graph of Run Time vs Input size
+    </h4>
+    <br>
+    <img src="szvsrt.jpg" style="margin-bottom: 8em;" , class="ctr">
+
+    <h4 style="text-align:center ; font-size: 1.5em;margin-top: 10em;font-style: italic;text-decoration: underline;">
+        This is the graph of Output pairs vs Input Size
+        
+    </h4>
+    <br>
+    <img src="otvsrt.jpg" , class="ctr">
+    <!-- <img src="https://cdn.codespeedy.com/wp-content/uploads/2019/12/save-a-plot-as-an-image-in-matplotlib-python.png"
+        alt="graph2" class="ctr"> -->
+    <center>
+        <h4 style="text-align:center ; font-size: 1.5em;margin-top: 10em;font-style: italic;text-decoration: underline;"
+            , class="ctr">
+            This is the graph of Run Time vs Number of output pairs
+        </h4>
+    </center>
+    <br>
+    <img src="iszvsot.jpg" , class="ctr">
+
+</body>
+
+</html>
